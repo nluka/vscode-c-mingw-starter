@@ -3,18 +3,24 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "C/C++ gcc.exe build active file",
-      "command": "C:\\MinGW\\bin\\gcc.exe",
-      "args": ["-g", "*.c", "-o", "${workspaceFolder}\\bin\\Application.exe"],
+      "label": "build-project",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${workspaceFolder}\\src\\*.c",
+        "${workspaceFolder}\\src\\core\\*.c",
+        "-o",
+        "${workspaceFolder}\\bin\\Application.exe"
+      ],
       "options": {
-        "cwd": "${workspaceFolder}\\src"
+        "cwd": "${workspaceFolder}"
       },
       "problemMatcher": ["$gcc"],
       "group": {
         "isDefault": true,
         "kind": "build"
       },
-      "detail": "compiler: C:\\MinGW\\bin\\gcc.exe"
+      "detail": "compiler: gcc"
     }
   ]
 }
